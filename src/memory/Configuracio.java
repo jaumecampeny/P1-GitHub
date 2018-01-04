@@ -105,45 +105,6 @@ public class Configuracio {
             return aconfiguracio;
         }
 
-<<<<<<< HEAD
-    //public float valorParcial(ArrayList<Configuracio> ac, Producte[] p, float[][] probabilitats){
-    //    int[] posicio = new int[2];
-
-    //    if(ac.size() > 1) {
-    //        for (int i = 0; i < p.length; i++) {
-    //            if (this.producte.equals(p[i])) {
-    //                posicio[0] = i;
-    //            }
-    //            if (ac.get(ac.size()-1).producte.equals(p[i])) {
-    //                posicio[1] = i;
-    //            }
-    //        }
-    //        return probabilitats[posicio[0]][posicio[1]];
-    //    }else{
-    //        return 0;
-    //    }
-    //}
-
-    public float valor(ArrayList<Configuracio> ac, Producte[] p, float[][] probabilitats){
-        boolean[] control;
-        float valor = 0;
-        Casella[] c = new Casella[2];
-
-        for(int i = 0; i < probabilitats.length; i++){
-            for(int j = i; j < probabilitats[i].length; j++){
-                control = new boolean[2];
-                for(int k = 0; k < ac.size(); k++){
-                    if(ac.get(k).producte.equals(p[i]) || this.producte.equals(p[i])){
-                        control[0] = true;
-                        c[0] = ac.get(k).casella;
-                    }
-                    if(ac.get(k).producte.equals(p[j]) || this.producte.equals(p[j])){
-                        control[1] = true;
-                        c[1] = ac.get(k).casella;
-                    }
-                    if(control[0] && control[1]){
-                        valor = valor + probabilitats[i][j]*(Math.abs(c[0].getX() - c[1].getX()) + Math.abs(c[0].getY() - c[1].getY()) + Math.abs(c[0].getZ() - c[1].getZ()));
-=======
         public boolean solucio(ArrayList<Node> ac, Producte[] p){
             return(ac.size() + 1 == p.length);
         }
@@ -197,7 +158,6 @@ public class Configuracio {
                         if(control[0] && control[1]){
                             valor = valor + probabilitats[i][j]*(Math.abs(c[0].getX() - c[1].getX()) + Math.abs(c[0].getY() - c[1].getY()) + Math.abs(c[0].getZ() - c[1].getZ()));
                         }
->>>>>>> b3f94dad8e8c7844f530daa78d99327e48252ff1
                     }
                 }
             }
