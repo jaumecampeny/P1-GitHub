@@ -75,68 +75,8 @@ public class OpcionsMenu {
         return f.llegeixFitxerProbabilitats(p);
     }
 
-    public ArrayList<Configuracio> Opcio3(Warehouse wh, Producte[] p, float[][] probabilitats){
-        ArrayList<Casella> ac = new ArrayList<>();
-        ArrayList<ArrayList<Configuracio>> nodesVius = new ArrayList<>();
-        ArrayList<Configuracio> x, xMillor = new ArrayList<>(), fills, aux;
-        float vMillor = 9999999;
-        int comptador = 0, comptador2 = 0;
-
-        for(int i = 0; i < wh.getWarehouseBooleans().length; i++){
-            for(int j = 0; j < wh.getWarehouseBooleans()[i].length; j++){
-                if(wh.getWarehouseBooleans()[i][j]){
-                    ac.add(new Casella(i,j,0));
-                    ac.add(new Casella(i,j,1));
-                    ac.add(new Casella(i,j,2));
-                }
-            }
-        }
-
-        for(int i = 0; i < p.length; i++){
-            aux = new ArrayList<>();
-            aux.add(new Configuracio(ac.get(0),p[i]));
-            nodesVius.add(aux);
-        }
-
-        while(!nodesVius.isEmpty()){
-            x = nodesVius.get(0);
-            nodesVius.remove(0);
-            fills = x.get(x.size()-1).expandeix(p, ac);
-
-            for(int i = 0; i < fills.size(); i++){
-                if(fills.get(i).solucio(x,p)){
-                    if(fills.get(i).bona(x)){
-                        comptador++;
-                        if(fills.get(i).valor(x, p, probabilitats) < vMillor){
-                            comptador2++;
-                            vMillor = fills.get(i).valor(x, p, probabilitats);
-                            xMillor = new ArrayList<>(x);
-                            xMillor.add(fills.get(i));
-                        }
-                    }
-                }else{
-                    if(fills.get(i).bona(x)){
-                        comptador++;
-                        if(fills.get(i).valor(x, p, probabilitats) < vMillor){
-                            aux = new ArrayList<>(x);
-                            aux.add(fills.get(i));
-                            nodesVius.add(aux);
-                        }
-                    }
-                }
-            }
-            //ordena nodesVius
-
-        }
-
-        System.out.println(xMillor.size() + "   " + comptador + "   " + comptador2);
-
-        for(int i = 0; i < xMillor.size(); i++){
-            System.out.print(xMillor.get(i).getCasella().toString() + "   ");
-            System.out.println(xMillor.get(i).getProducte().toString());
-        }
-
-        return xMillor;
+    public ArrayList<Configuracio.Node> Opcio3(Warehouse wh, Producte[] p, float[][] probabilitats){
+        return new Configuracio(wh,p,probabilitats).getxMillor();
     }
 
     public void Opcio4(){

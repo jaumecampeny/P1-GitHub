@@ -60,7 +60,7 @@ public class Menu {
      */
     public int executaMenu(boolean[] executada){
         OpcionsMenu om = new OpcionsMenu();
-        ArrayList<Configuracio> xMillor;
+        ArrayList<Configuracio.Node> xMillor;
         sc = new Scanner(System.in);
 
         do {
