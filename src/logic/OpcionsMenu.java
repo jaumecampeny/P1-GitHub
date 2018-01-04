@@ -75,6 +75,7 @@ public class OpcionsMenu {
         return f.llegeixFitxerProbabilitats(p);
     }
 
+<<<<<<< HEAD
     public ArrayList<Configuracio> Opcio3(Warehouse wh, Producte[] p, float[][] probabilitats){
 
         ArrayList<Casella> ac = new ArrayList<>();
@@ -146,6 +147,10 @@ public class OpcionsMenu {
         }
 
         return xMillor;
+=======
+    public ArrayList<Configuracio.Node> Opcio3(Warehouse wh, Producte[] p, float[][] probabilitats){
+        return new Configuracio(wh,p,probabilitats).getxMillor();
+>>>>>>> b3f94dad8e8c7844f530daa78d99327e48252ff1
     }
 
     public void Opcio4(){
