@@ -12,6 +12,8 @@ public class Fitxer extends File {
         super(s);
     }
 
+
+    //still to implement from warehouse class
     public JSONObject llegeixFitxerMagatzem(Fitxer f) throws FileNotFoundException{
             String info = new Scanner(f).useDelimiter("\\Z").next();
             Gson gson = new Gson();
