@@ -108,6 +108,7 @@ public class Configuracio {
 <<<<<<< HEAD
     //public float valorParcial(ArrayList<Configuracio> ac, Producte[] p, float[][] probabilitats){
     //    int[] posicio = new int[2];
+
     //    if(ac.size() > 1) {
     //        for (int i = 0; i < p.length; i++) {
     //            if (this.producte.equals(p[i])) {

@@ -77,7 +77,6 @@ public class OpcionsMenu {
 
 <<<<<<< HEAD
     public ArrayList<Configuracio> Opcio3(Warehouse wh, Producte[] p, float[][] probabilitats){
-
         ArrayList<Casella> ac = new ArrayList<>();
         ArrayList<ArrayList<Configuracio>> nodesVius = new ArrayList<>();
         ArrayList<Configuracio> x, xMillor = new ArrayList<>(), fills, aux;
@@ -85,27 +84,19 @@ public class OpcionsMenu {
         int comptador = 0, comptador2 = 0;
 
         for(int i = 0; i < wh.getWarehouseBooleans().length; i++){
-
             for(int j = 0; j < wh.getWarehouseBooleans()[i].length; j++){
-
                 if(wh.getWarehouseBooleans()[i][j]){
-
                     ac.add(new Casella(i,j,0));
                     ac.add(new Casella(i,j,1));
                     ac.add(new Casella(i,j,2));
-
                 }
-
             }
-
         }
 
         for(int i = 0; i < p.length; i++){
-
             aux = new ArrayList<>();
             aux.add(new Configuracio(ac.get(0),p[i]));
             nodesVius.add(aux);
-
         }
 
         while(!nodesVius.isEmpty()){
