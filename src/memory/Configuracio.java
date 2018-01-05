@@ -49,12 +49,68 @@ public class Configuracio {
         return ac;
     }
 
+    private float valorNodes(ArrayList<Node> ac, Producte[] p, float[][] probabilitats){
+
+        boolean[] control;
+        float valor = 0;
+        Casella[] c = new Casella[2];
+
+        for(int i = 0; i < probabilitats.length; i++){
+
+            for(int j = i; j < probabilitats[i].length; j++){
+
+                control = new boolean[2];
+
+                for(int k = 0; k < ac.size(); k++){
+
+                    if(ac.get(k).producte.equals(p[i])){
+
+                        control[0] = true;
+                        c[0] = ac.get(k).casella;
+
+                    }
+                    if(ac.get(k).producte.equals(p[j])){
+
+                        control[1] = true;
+                        c[1] = ac.get(k).casella;
+
+                    }
+                    if(control[0] && control[1]){
+
+                        valor = valor + probabilitats[i][j]*(Math.abs(c[0].getX() - c[1].getX()) + Math.abs(c[0].getY() - c[1].getY()) + Math.abs(c[0].getZ() - c[1].getZ()));
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return valor;
+
+    }
+
+    private ArrayList<ArrayList<Node>> ordenaNodes(ArrayList<ArrayList<Node>> aan, Producte[] p, float[][] probabilitats){
+        ArrayList<Node> temp;
+        for(int i=1; i < aan.size() ;i++){
+            for (int j=0 ; j < aan.size() - 1; j++){
+                if (valorNodes(aan.get(j), p, probabilitats) < valorNodes(aan.get(j+1), p, probabilitats)){
+                    temp = aan.get(j);
+                    aan.set(j, aan.get(j+1));
+                    aan.set(j+1,temp);
+                }
+            }
+        }
+        return aan;
+    }
+
     public Configuracio(Warehouse wh, Producte[] p, float[][] probabilitats) {
 
         ArrayList<Casella> ac;
         ArrayList<ArrayList<Node>> nodesVius;
         ArrayList<Node> x, fills, aux;
-        float vMillor = 9999999;
+        float vMillor = 0;
         int comptador = 0, comptador2 = 0;
 
         //agreguem caselles
@@ -76,7 +132,7 @@ public class Configuracio {
 
                         comptador++;
 
-                        if(fills.get(i).valor(x, p, probabilitats) < vMillor){
+                        if(fills.get(i).valor(x, p, probabilitats) > vMillor){
 
                             comptador2++;
                             vMillor = fills.get(i).valor(x, p, probabilitats);
@@ -93,11 +149,11 @@ public class Configuracio {
 
                         comptador++;
 
-                        if(fills.get(i).valor(x, p, probabilitats) < vMillor){
+                        //if(fills.get(i).valor(x, p, probabilitats) < vMillor){
                             aux = new ArrayList<>(x);
                             aux.add(fills.get(i));
                             nodesVius.add(aux);
-                        }
+                        //}
 
                     }
 
@@ -105,7 +161,7 @@ public class Configuracio {
 
             }
             //ordena nodesVius
-
+            nodesVius = ordenaNodes(nodesVius, p, probabilitats);
         }
 
         System.out.println(xMillor.size() + "   " + comptador + "   " + comptador2);
