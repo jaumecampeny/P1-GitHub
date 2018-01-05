@@ -10,8 +10,11 @@
  */
 
 package memory;
+import files.Fitxer;
 import logic.Config;
 import com.google.gson.*;
+
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -43,6 +46,20 @@ public class Warehouse {
         }
 
 
+    }
+
+    public int getMax_z() {
+        return max_z;
+    }
+
+
+
+    public ArrayList<ShelfConfiguration> getShelves_config() {
+        return shelves_config;
+    }
+
+    public ArrayList<Shelf> getShelves() {
+        return shelves;
     }
 
     //Dimensions of warehouse
@@ -94,7 +111,7 @@ public class Warehouse {
     }
 
     //Getters/setters for dimension attributes
-    private int getMax_x() {
+    public int getMax_x() {
         return max_x;
     }
 
@@ -102,7 +119,7 @@ public class Warehouse {
         this.max_x = max_x;
     }
 
-    private int getMax_y() {
+    public int getMax_y() {
         return max_y;
     }
 
@@ -245,10 +262,6 @@ public class Warehouse {
 
         try {
 
-            /*
-            System.out.println("Introdueix path al arxiu");
-
-            */
 
             path = createValidPath();
 
@@ -258,6 +271,8 @@ public class Warehouse {
                 Config.forceQuit = 1;
 
             } else {
+
+
 
                 tempobject = (JsonObject) parser.parse(new FileReader(path));
 

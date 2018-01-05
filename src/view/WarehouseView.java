@@ -248,6 +248,8 @@ public class WarehouseView extends JFrame {
      * Un exemple de com utilitzar la gràfica
      * @param args
      */
+
+    /*
     public static void main(String []args) {
 
 
@@ -267,7 +269,7 @@ public class WarehouseView extends JFrame {
 
         /* Actualitzem el panell d'informació d'una casella en les diferents altures
          * en, imaginariament, el punt (x,y)=(0,0).
-        */
+
         view.setBoxInfo(
                 new String[] {
                         "(x,y,z)=(0,0,0) P1 - ID: 1234",
@@ -283,5 +285,6 @@ public class WarehouseView extends JFrame {
         // Mostrem la vista
         view.setVisible(true);
     }
+    */
 
 }

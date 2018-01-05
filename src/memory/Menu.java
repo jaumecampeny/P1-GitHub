@@ -1,9 +1,12 @@
-package logic;
+package memory;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static java.lang.Integer.parseInt;
+
+import logic.Config;
+import view.WarehouseView;
 
 import memory.Configuracio;
 import memory.Producte;
@@ -48,7 +51,7 @@ public class Menu {
         }
         System.out.println();
 
-        error = error || menu < 1 || menu > 5;                                                                          //Busca si existeix algun error
+        error = error || menu < 1 || menu > 5;      //Busca si existeix algun error
         sc.nextLine();
         return error;
     }
@@ -64,38 +67,65 @@ public class Menu {
         sc = new Scanner(System.in);
 
         do {
-            printaMenu();                                                                                               //Printa les opcions del menú
-            opcioCorrecte();                                                                                            //Demana opcio i mira si aquesta és correcte
+            printaMenu();       //Printa les opcions del menú
+            opcioCorrecte();    //Demana opcio i mira si aquesta és correcte
         } while (error);
 
         switch (menu) {
+
             case 1:
+
                 wh = om.Opcio1();
                 executada[0] = true;
                 break;
+
             case 2:
+
                 p = om.Opcio2Productes();
                 probabilitats = om.Opcio2Probabilitats(p);
                 executada[1] = true;
                 break;
+
             case 3:
+
                 if(executada[0] && executada[1]) {
+
                     xMillor = om.Opcio3(wh, p, probabilitats);
+
+                    //show warehouse
+                    GuiSet gui = new GuiSet(wh ,xMillor);
+
                 }else{
+
                     System.out.println("Error: no s'han executat la opció 1 o la opció 2 (necessaries per executar aquesta)");
+
                 }
                 break;
+
             case 4:
+
                 if(executada[0] && executada[1] && executada[2]){
+
                     om.Opcio4();
+
                 }else {
+
                     System.out.println("Error: no s'han executat la opció 1 o la opció 2 o la opció 3 (necessaries per executar aquesta)");
+
                 }
+
                 break;
+
             case 5:
+
                 System.out.println("Gràcies per utilitzar el nostre programa!");
+
                 break;
+
         }
+
         return menu;
+
     }
+
 }

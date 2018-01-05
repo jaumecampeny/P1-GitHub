@@ -1,10 +1,15 @@
 package controller;
 
+import logic.Config;
+import memory.Configuracio;
+import memory.GuiSet;
+import memory.Warehouse;
 import view.WarehouseView;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 
 /**
@@ -28,27 +33,93 @@ public class BoxListener implements MouseListener {
 
 
     private WarehouseView view;
-    // ...
+    private ArrayList<Configuracio.Node> distribucio;
 
 
-
-    public BoxListener(WarehouseView view) {
+    public BoxListener(WarehouseView view, ArrayList<Configuracio.Node> distribucio ) {
         this.view = view;
-        // ...
+        this.distribucio = distribucio;
+
+
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
 
+        //get x and y mouse position
         Point point = e.getPoint();
 
-        Point p = view.getBoxClickedPosition(point);
-        if (p == null) System.out.println("null point");
+        //from the x and y position of the mouse to x and y shelf coordinates of the warehouse matrix
+        point = view.getBoxClickedPosition(point);
+
+        //check if exists shelf in that position
+        if (point == null) System.out.println("No shelf here");
+
         else {
-            // TODO: deixar a l'alumne per fer
-            // ...
-            System.out.println("han fet clic...");
+
+            boolean ok = false;
+            int index = 0;
+
+            while(!ok){
+
+                //check if the box coordinates match with any products coordinates
+                if (distribucio.get(index).getCasella().getX() == point.getX() && distribucio.get(index).getCasella().getY() == point.getY()){
+
+                    //create a string to show product information big as amount of products per shelf AKA depth of shelf
+                    String []temp = new String[Config.MAX_Z];
+
+
+                    try{
+
+                        int index2 = index;
+
+                        //for all amount of products, Z size
+                        for (int i = 0; i < Config.MAX_Z; i++){
+
+                            //check if next product in the distribution array is in the same box as the previous, if it is we will add it
+                            if (distribucio.get(index).getCasella().getX() == distribucio.get(index2).getCasella().getX() && distribucio.get(index).getCasella().getY() == distribucio.get(index2).getCasella().getY()){
+                            temp[i] = "Producte: " + distribucio.get(index2).getProducte().getId() + " Nom: "+distribucio.get(index2).getProducte().getName();
+
+                            }
+
+                            index2++;
+
+                        }
+
+                    }catch(IndexOutOfBoundsException ee){
+
+
+                    }
+
+                    view.setBoxInfo(temp);
+
+                    ok = true;
+
+                }else{
+
+                    index++;
+
+                }
+
+                if (index >= distribucio.size()){
+
+                    ok = true;
+                    String temp [] = new String[]{
+
+                            "No Product",
+                            "No Product",
+                            "No Product"
+
+                    };
+
+                    view.setBoxInfo(temp);
+
+                }
+
+            }
+
         }
+
     }
 
     @Override
