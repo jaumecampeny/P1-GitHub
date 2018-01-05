@@ -1,7 +1,6 @@
 package memory;
 
 import controller.BoxListener;
-import logic.Config;
 import view.WarehouseView;
 
 import java.util.ArrayList;

@@ -1,7 +1,5 @@
 package view;
 
-import controller.BoxListener;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseListener;

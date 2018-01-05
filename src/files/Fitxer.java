@@ -1,8 +1,6 @@
 package files;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonParser;
-import com.google.gson.stream.JsonReader;
 import memory.Producte;
 import org.json.*;
 import java.io.*;

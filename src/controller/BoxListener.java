@@ -2,8 +2,6 @@ package controller;
 
 import logic.Config;
 import memory.Configuracio;
-import memory.GuiSet;
-import memory.Warehouse;
 import view.WarehouseView;
 
 import java.awt.*;

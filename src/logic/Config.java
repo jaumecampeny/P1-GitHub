@@ -1,10 +1,5 @@
 package logic;
 
-import memory.Configuracio;
-import view.WarehouseView;
-
-import java.util.ArrayList;
-
 public class Config {
 
     //All default parameters
