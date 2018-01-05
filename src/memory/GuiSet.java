@@ -12,7 +12,6 @@ public class GuiSet {
 
     Warehouse warehouse;
 
-
     public GuiSet (Warehouse warehouse, ArrayList<Configuracio.Node> xMillor) {
 
         this.warehouse = warehouse;

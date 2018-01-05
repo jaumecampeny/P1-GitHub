@@ -53,9 +53,18 @@ public class BoxListener implements MouseListener {
         point = view.getBoxClickedPosition(point);
 
         //check if exists shelf in that position
-        if (point == null) System.out.println("No shelf here");
+        if (point == null) {
+            String temp [] = new String[]{
 
-        else {
+                    "Shelf does not exist",
+                    "",
+                    ""
+
+            };
+
+            view.setBoxInfo(temp);
+
+        }else {
 
             boolean ok = false;
             int index = 0;
@@ -68,26 +77,27 @@ public class BoxListener implements MouseListener {
                     //create a string to show product information big as amount of products per shelf AKA depth of shelf
                     String []temp = new String[Config.MAX_Z];
 
+                    int index2 = index;
 
-                    try{
+                    //for all amount of products, Z size
+                    for (int i = 0; i < Config.MAX_Z; i++) {
 
-                        int index2 = index;
-
-                        //for all amount of products, Z size
-                        for (int i = 0; i < Config.MAX_Z; i++){
+                        try {
 
                             //check if next product in the distribution array is in the same box as the previous, if it is we will add it
-                            if (distribucio.get(index).getCasella().getX() == distribucio.get(index2).getCasella().getX() && distribucio.get(index).getCasella().getY() == distribucio.get(index2).getCasella().getY()){
-                            temp[i] = "Producte: " + distribucio.get(index2).getProducte().getId() + " Nom: "+distribucio.get(index2).getProducte().getName();
+                            if (distribucio.get(index).getCasella().getX() == distribucio.get(index2).getCasella().getX() && distribucio.get(index).getCasella().getY() == distribucio.get(index2).getCasella().getY()) {
+                                temp[i] = "Producte: " + distribucio.get(index2).getProducte().getId() + " Nom: " + distribucio.get(index2).getProducte().getName();
 
                             }
 
+                            //increase it to gather information from next Z product
                             index2++;
 
+                        } catch (IndexOutOfBoundsException ee) {
+
+                            temp[i] = "No product";
+
                         }
-
-                    }catch(IndexOutOfBoundsException ee){
-
 
                     }
 
@@ -101,6 +111,7 @@ public class BoxListener implements MouseListener {
 
                 }
 
+                //if no products exist we show
                 if (index >= distribucio.size()){
 
                     ok = true;

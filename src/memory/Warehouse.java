@@ -323,6 +323,8 @@ public class Warehouse {
         }catch(IOException e){
 
             System.out.println(e);
+            Config.forceQuit = 1;
+            Config.error = 2;
 
         }
 
@@ -481,11 +483,11 @@ public class Warehouse {
                  tempobject = (JsonObject) parser.parse(new FileReader(path));
                  ok = true;
 
-             } catch (FileNotFoundException e) {
+
+             } catch (FileNotFoundException | ClassCastException ee) {
 
                  //if file cannot be find we will tell the user
-                 System.out.println("Error no file found with that path. Try again?");
-
+                 System.out.println("Error no file found with that path, or incorrect file. Try again?");
 
                  do {
 
