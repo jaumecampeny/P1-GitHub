@@ -57,8 +57,10 @@ public class Menu {
      */
     public int executaMenu(boolean[] executada){
         OpcionsMenu om = new OpcionsMenu();
-        ArrayList<Configuracio.Node> xMillor;
+        ArrayList<Configuracio.Node> xMillor = null;
         sc = new Scanner(System.in);
+
+
 
         do {
             printaMenu();       //Printa les opcions del menú
@@ -84,10 +86,11 @@ public class Menu {
 
                 if(executada[0] && executada[1]) {
 
+                    executada[2] = true;
                     xMillor = om.Opcio3(wh, p, probabilitats);
+                    Config.solucio = xMillor;
 
-                    //show warehouse
-                    GuiSet gui = new GuiSet(wh ,xMillor);
+
 
                 }else{
 
@@ -100,6 +103,7 @@ public class Menu {
 
                 if(executada[0] && executada[1] && executada[2]){
 
+                    GuiSet gui = new GuiSet(wh ,Config.solucio);
                     om.Opcio4();
 
                 }else {

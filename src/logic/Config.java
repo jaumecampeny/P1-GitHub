@@ -1,5 +1,9 @@
 package logic;
 
+import memory.Configuracio;
+
+import java.util.ArrayList;
+
 public class Config {
 
     //All default parameters
@@ -13,4 +17,5 @@ public class Config {
     //general variable that it will change state when we want to force quit
     public static int forceQuit = 0;
 
+    public static ArrayList<Configuracio.Node> solucio;
 }

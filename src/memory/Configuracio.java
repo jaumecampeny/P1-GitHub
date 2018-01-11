@@ -11,6 +11,7 @@ public class Configuracio {
         private ArrayList<Casella> xMillor;
         private int[] vMillor;
 
+
         public Prestatge(int[] prestatges, int prestatges_necessaries, Warehouse wh, ArrayList<Casella> ac) {
             System.out.println("\tBuscant prestatges òptims...");
             this.prestatges_necessaries = prestatges_necessaries;
@@ -318,13 +319,17 @@ public class Configuracio {
             boolean b = true;
 
             for(int i = 0; i < ac.size(); i++){
+
                 if(this.producte.equals(ac.get(i).producte)){
+
                     b = false;
+
                 }
+
             }
+
             return b;
         }
-
 
         public float valor(ArrayList<Node> ac, Producte[] p, float[][] probabilitats){
             boolean[] control; boolean condicio;
@@ -332,37 +337,63 @@ public class Configuracio {
             Casella[] c = new Casella[2];
 
             for(int i = 0; i < probabilitats.length; i++){
+
                 for(int j = i+1; j < probabilitats[i].length; j++){
+
                     control = new boolean[2];
                     condicio = true;
+
                     for(int k = 0; k < ac.size() && condicio; k++){
 
                         if(ac.get(k).producte.equals(p[i]) || this.producte.equals(p[i])){
+
                             control[0] = true;
+
                             if(ac.get(k).producte.equals(p[i])) {
+
                                 c[0] = ac.get(k).casella;
+
                             }else{
+
                                 c[0] = this.casella;
+
                             }
                         }
 
                         if(ac.get(k).producte.equals(p[j]) || this.producte.equals(p[j])){
+
                             control[1] = true;
+
                             if(ac.get(k).producte.equals(p[j])) {
+
                                 c[1] = ac.get(k).casella;
+
                             }else{
+
                                 c[1] = this.casella;
+
                             }
+
                         }
 
                         if(control[0] && control[1]){
+
                             valor = valor + (1 - probabilitats[i][j])*(Math.abs(c[0].getX() - c[1].getX()) + Math.abs(c[0].getY() - c[1].getY()) + Math.abs(c[0].getZ() - c[1].getZ()));
+
                             condicio = false;
+
                         }
+
                     }
+
                 }
+
             }
+
             return valor;
+
         }
+
     }
+
 }
