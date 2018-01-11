@@ -2,22 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a543792-6cfe-4a96-969c-db9393efc211" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/controller/BoxListener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/files/Fitxer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/logic/Config.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/logic/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/memory/Casella.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/memory/Configuracio.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/memory/Producte.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/memory/Warehouse$Shelf.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/memory/Warehouse$ShelfConfiguration.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/memory/Warehouse$WarehouseShelf.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/memory/Warehouse.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/view/ViewConstants.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/view/WarehouseView$GridComponent.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1/view/WarehouseView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/graph.txt" afterPath="$PROJECT_DIR$/data/graph.txt" />
+      <change beforePath="$PROJECT_DIR$/data/products.json" afterPath="$PROJECT_DIR$/data/products.json" />
+      <change beforePath="$PROJECT_DIR$/data/warehouse.json" afterPath="$PROJECT_DIR$/data/warehouse.json" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1/logic/Menu.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1/logic/OpcionsMenu.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/controller/BoxListener.java" afterPath="$PROJECT_DIR$/src/controller/BoxListener.java" />
+      <change beforePath="$PROJECT_DIR$/src/files/Fitxer.java" afterPath="$PROJECT_DIR$/src/files/Fitxer.java" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Config.java" afterPath="$PROJECT_DIR$/src/logic/Config.java" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Main.java" afterPath="$PROJECT_DIR$/src/logic/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Menu.java" afterPath="$PROJECT_DIR$/src/logic/Menu.java" />
+      <change beforePath="$PROJECT_DIR$/src/logic/OpcionsMenu.java" afterPath="$PROJECT_DIR$/src/logic/OpcionsMenu.java" />
+      <change beforePath="$PROJECT_DIR$/src/memory/Casella.java" afterPath="$PROJECT_DIR$/src/memory/Casella.java" />
+      <change beforePath="$PROJECT_DIR$/src/memory/Configuracio.java" afterPath="$PROJECT_DIR$/src/memory/Configuracio.java" />
+      <change beforePath="$PROJECT_DIR$/src/memory/Producte.java" afterPath="$PROJECT_DIR$/src/memory/Producte.java" />
+      <change beforePath="$PROJECT_DIR$/src/memory/Warehouse.java" afterPath="$PROJECT_DIR$/src/memory/Warehouse.java" />
+      <change beforePath="$PROJECT_DIR$/src/view/ViewConstants.java" afterPath="$PROJECT_DIR$/src/view/ViewConstants.java" />
+      <change beforePath="$PROJECT_DIR$/src/view/WarehouseView.java" afterPath="$PROJECT_DIR$/src/view/WarehouseView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/logic/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -39,10 +40,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GuiSet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/memory/GuiSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Configuracio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/memory/Configuracio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="510">
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
@@ -62,7 +75,7 @@
       <file leaf-file-name="Producte.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/memory/Producte.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
+            <state relative-caret-position="663">
               <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="e#400#401#0" expanded="true" />
@@ -75,7 +88,7 @@
       <file leaf-file-name="Casella.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/memory/Casella.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
+            <state relative-caret-position="748">
               <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
               <folding>
                 <element signature="e#255#256#0" expanded="true" />
@@ -89,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/logic/Menu.java" />
         <option value="$PROJECT_DIR$/src/logic/OpcionsMenu.java" />
         <option value="$PROJECT_DIR$/src/memory/Configuracio.java" />
+        <option value="$PROJECT_DIR$/src/logic/Config.java" />
       </list>
     </option>
   </component>
@@ -178,67 +192,6 @@
             </path>
             <path>
               <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="P1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="P1" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="memory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
-              <item name="holii" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="holii" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -251,8 +204,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -414,6 +367,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -424,7 +378,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -436,7 +390,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -452,17 +405,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/memory/Producte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/memory/Casella.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -763,9 +705,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Fitxers Exemple/graph.txt" />
+    <entry file="file://$PROJECT_DIR$/src/logic/Menu.java" />
+    <entry file="file://$PROJECT_DIR$/src/logic/OpcionsMenu.java" />
+    <entry file="file://$PROJECT_DIR$/src/logic/BranchBound.java" />
+    <entry file="file://$PROJECT_DIR$/src/logic/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/memory/Casella.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="748">
           <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
           <folding>
             <element signature="e#255#256#0" expanded="true" />
@@ -780,24 +734,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/memory/Producte.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
+        <state relative-caret-position="663">
           <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="e#400#401#0" expanded="true" />
             <element signature="e#432#433#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Fitxers Exemple/graph.txt" />
-    <entry file="file://$PROJECT_DIR$/src/logic/Menu.java" />
-    <entry file="file://$PROJECT_DIR$/src/logic/OpcionsMenu.java" />
-    <entry file="file://$PROJECT_DIR$/src/logic/BranchBound.java" />
-    <entry file="file://$PROJECT_DIR$/src/logic/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,13 +753,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/memory/Configuracio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="510">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/memory/GuiSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
